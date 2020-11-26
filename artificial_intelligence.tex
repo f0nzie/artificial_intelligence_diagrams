@@ -1,0 +1,173 @@
+% Drawn by Alfonso R. Reyes
+% Based on: https://github.com/FriendlyUser/LatexDiagrams
+\documentclass[border=5pt]{standalone}
+\usepackage{xcolor}
+
+	\definecolor{ocre}{HTML}{800000}
+	\definecolor{sky}{HTML}{C6D9F1}
+	\definecolor{skybox}{HTML}{5F86B3}
+
+\usepackage{tikz}
+\usepackage{pgfmath}
+\usetikzlibrary{decorations.text, arrows.meta,calc,shadows.blur,shadings}
+
+\renewcommand*\familydefault{\sfdefault} % Set font to serif family
+
+% arctext from Andrew code with modifications:
+%Variables: 1: ID, 2:Style 3:box height 4: Radious 5:start-angl 6:end-angl 7:text {format along path} 
+\def\arctext[#1][#2][#3](#4)(#5)(#6)#7{
+
+\draw[#2] (#5:#4cm+#3) coordinate (above #1) arc (#5:#6:#4cm+#3)
+             -- (#6:#4) coordinate (right #1) -- (#6:#4cm-#3) coordinate (below right #1) arc (#6:#5:#4cm-#3) coordinate (below #1)
+             -- (#5:#4) coordinate (left #1) -- cycle;
+            \def\a#1{#4cm+#3}
+            \def\b#1{#4cm-#3}
+\path[
+    decoration={
+        raise = -0.5ex, % Controls relavite text height position.
+        text  along path,
+        text = {#7},
+        text align = center,        
+    },
+    decorate
+    ]
+    (#5:#4) arc (#5:#6:#4);
+}
+
+%arcarrow, this is mine, for beerware purpose...
+%Function: Draw an arrow from arctex coordinate specific nodes to another 
+%Arrow start at the start of arctext box and could be shifted to change the position
+%to avoid go over another box.
+%Var: 1:Start coordinate 2:End coordinate 3:angle to shift from acrtext box  
+\def\arcarrow(#1)(#2)[#3]{
+    \draw[thick,->,>=latex] 
+        let \p1 = (#1), \p2 = (#2), % To access cartesian coordinates x, and y.
+            \n1 = {veclen(\x1,\y1)}, % Distance from the origin
+            \n2 = {veclen(\x2,\y2)}, % Distance from the origin
+            \n3 = {atan2(\y1,\x1)} % Angle where acrtext starts.
+        in (\n3-#3: \n1) -- (\n3-#3: \n2); % Draw the arrow.
+}
+
+
+
+\begin{document}
+\begin{tikzpicture}[
+    % Environment Cfg
+    font=\sf    \scriptsize,
+    % Styles
+    myarrow/.style={
+        thick,
+        -latex,
+    },
+    Center/.style ={
+        circle,
+        fill=ocre,
+        text=white,
+        align=center,
+        font =\footnotesize\bf,
+        inner sep=1pt,          
+    },
+    RedArc/.style ={
+        color=black,
+        thick,
+        fill=ocre,
+        blur shadow, %Tikzedt not suport online view
+    },
+    SkyArc/.style ={
+        color=skybox,
+        thick,
+        fill=sky,
+        blur shadow, %Tikzedt not suport online view
+    },
+    ]
+
+    % Drawing the center
+    \node[Center](AI) at (0,0) { Artificial \\ Intelligence \\(AI)\\ Agent};
+    \coordinate (SOSA-R) at (0:1.2); % To make compatible with \arcarrow macro.
+
+    % Drawing the Tex Arcs
+    % \Arctext[ID][box-style][box-height](radious)(start-angl)(end-angl){|text-styles| Text}
+	% ML
+    \arctext[ML][RedArc][8pt](2.75)(140)(75){|\footnotesize\bf\color{white}| Machine Learning};
+    \arctext[REIN][SkyArc][5pt](3.50)(140)(90){|\scriptsize\color{black}| Reinforcement Learning};
+    \arctext[KNOW][SkyArc][5pt](4.00)(115)(90){|\scriptsize| Knowledge L.};
+    \arctext[SUPL][SkyArc][5pt](4.00)(145)(120){|\scriptsize| Supervised L.};
+    \arctext[PROB][SkyArc][5pt](4.50)(140)(90){|\scriptsize\color{black}| Probabilistic Models};
+    
+    % Problem Solving
+    \arctext[SOLV][RedArc][8pt](2.75)(70)(20){|\footnotesize\bf\color{white}| Problem Solving};
+    \arctext[SRCH][SkyArc][5pt](3.50)(60)(30){|\scriptsize\color{black}| Search };
+    \arctext[HEUR][SkyArc][5pt](4.00)(75)(55){|\scriptsize| Heuristics};
+	\arctext[ADVS][SkyArc][5pt](4.00)(50)(25){|\scriptsize| Adversarial S.};    
+	\arctext[CONST][SkyArc][5pt](4.50)(60)(30){|\scriptsize\color{black}| Constraint Analysis };
+	
+	% Natural Labnguaged Processing
+    \arctext[NLP][RedArc][8pt](2.75)(15)(-15){|\footnotesize\bf\color{white}| NLP};
+    \arctext[TRAN][SkyArc][5pt](3.50)(20)(-25){|\scriptsize\color{black}| Machine translation};
+    \arctext[SPER][SkyArc][5pt](4.00)(20)(-15){|\scriptsize| Speech Recognition};
+    \arctext[INFX][SkyArc][5pt](4.50)(20)(-20){|\scriptsize\color{black}| Information Extraction};
+
+    
+    % Decision Making
+    \arctext[DEC][RedArc][8pt](2.75)(290)(340){|\footnotesize\color{white}| Decision Making};
+    \arctext[LOG][SkyArc][5pt](3.50)(295)(315){|\scriptsize\color{black}| Logic};
+    \arctext[KNOW][SkyArc][5pt](4.00)(295)(335){|\scriptsize| Knowledge Engineering};
+    \arctext[PLAN][SkyArc][5pt](4.50)(295)(335){|\scriptsize| Real World Planning};
+    
+    % Reasoning
+    \arctext[REAS][RedArc][8pt](2.75)(250)(285){|\footnotesize\color{white}|  Reasoning};
+    \arctext[PROB][SkyArc][5pt](3.50)(245)(290){|\scriptsize\color{black}| Probabilistic Reasoning};
+    \arctext[REAT][SkyArc][5pt](4.00)(255)(290){|\scriptsize| Reasoning over time};
+    \arctext[UNQU][SkyArc][5pt](4.50)(250)(290){|\scriptsize\color{black}| Uncertainty Quantification};
+    
+    % Robotics
+    \arctext[ROB][RedArc][8pt](2.75)(210)(245){|\footnotesize\bf\color{white}|  Robotics};
+    \arctext[RPER][SkyArc][5pt](3.50)(210)(240){|\scriptsize\color{black}| R. Perception};
+    \arctext[RACT][SkyArc][5pt](4.00)(215)(240){|\scriptsize| R. Actuation};
+    \arctext[MAPL][SkyArc][5pt](4.50)(205)(245){|\scriptsize\color{black}| Mapping, Localization};
+    
+    % Object Recognition
+    \arctext[RECO][RedArc][8pt](2.75)(145)(205){|\footnotesize\color{white}| Object Recognition};
+    \arctext[VIS][SkyArc][5pt](3.50)(150)(200){|\scriptsize\color{black}| Vision};
+    \arctext[IMGP][SkyArc][5pt](4.00)(155)(195){|\scriptsize\color{black}| Image Processing };
+    \arctext[MOTC][SkyArc][5pt](4.50)(150)(200){|\scriptsize\color{black}| Motion, shading, contour analysis};   
+  
+
+    %ADITIONAL
+%    \arctext[NEW][
+%        color=white,
+%        shade,      
+%        upper left=blue,
+%        upper right=black!50,
+%        lower left=blue,
+%        lower right=blue!50,
+%        rounded corners = 8pt
+%        ][8pt](5.2)(270)(-90){|\footnotesize\bf\color{white}| "An [artificial intelligence] agent is anything that can be viewed as perceiving its environment through sensors and acting upon that environment through actuators." Norvig and Russell};
+
+    %Drawing the Arrows
+    %\arcarrow(above/below ID)(abobe/below ID)[shift]
+    \arcarrow(below ML)(SOSA-R)[30];
+    \arcarrow(below SOLV)(SOSA-R)[25];
+    \arcarrow(below NLP)(SOSA-R)[15];
+    \arcarrow(below DEC)(SOSA-R)[-20];
+    \arcarrow(below REAS)(SOSA-R)[-15];
+    \arcarrow(below ROB)(SOSA-R)[-20];
+    \arcarrow(below RECO)(SOSA-R)[-30];
+
+
+    %Same level Arrows
+    % \draw[myarrow] (left SSNX) -- (right DUAM);
+   % \draw[myarrow] (left ML) -- (left SRel);
+    % \draw[myarrow] (left SCap) -- (right ML);
+
+        \draw[myarrow] (-5,-5) coordinate (legend) -- ++(.8,0) node[anchor=west] {(contribution)};
+        \draw[RedArc] (legend)++(0,-0.4) rectangle ++(.8,-.3)++(0,.2) node[anchor=west] {disciplines};
+        \draw[SkyArc] (legend)++(0,-1) rectangle ++(.8,-.3)++(0,.2) node[anchor=west, color=black] {requirements};
+        
+		% \node[draw] at (0,0) {};
+		% \node[draw,align=left] at (3,0) {};
+		\node[text width=3cm] at (3,-6.25) {\begin{tiny}Copyright \textcopyright Alfonso R. Reyes, 2020\end{tiny}};
+
+\end{tikzpicture}
+% \begin{tiny}Copyright \textcopyright Alfonso R. Reyes, 2020\end{tiny}        
+\end{document}
