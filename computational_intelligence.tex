@@ -1,7 +1,7 @@
-% Artificial Intelligence Agent Contributors
+% Computational Intelligence Agent Contributors
 % Drawn by Alfonso R. Reyes
 % November 2020
-% Personal interpretation of "Artificial Intelligence: A Modern Approach" by Peter Norvig and Stuart Russell
+% Personal interpretation of "Computational Intelligence: A Logical Approach" by David Poole, Alan Mackworth and Randy Goebel.
 % Original diagram: https://github.com/FriendlyUser/LatexDiagrams
 \documentclass[border=5pt]{standalone}
 \usepackage{xcolor}
@@ -84,67 +84,68 @@
     ]
 
     % Drawing the center for AI
-    \node[Center](AI) at (0,0) { Artificial \\ Intelligence \\(AI)\\ Agent};
+    \node[Center](AI) at (0,0) { Computational \\ Intelligence \\(AI)\\ Agent};
     \coordinate (AROUND) at (0:1.2); 
 
     % Drawing the Text Arcs
     % Format: \Arctext[ID][box-style][box-height](radious)(start-angl)(end-angl){|text-styles| Text}
     
 	% Machine Learning
-    \arctext[ML][RedArc][8pt](2.75)(140)(75){|\footnotesize\bf\color{white}| Machine Learning};
-    \arctext[REIN][SkyArc][5pt](3.50)(140)(75){|\scriptsize\color{black}| Reinforcement Learning};
-    \arctext[KNOW][SkyArc][5pt](4.00)(110)(75){|\scriptsize| Knowledge L.};
-    \arctext[SUPL][SkyArc][5pt](4.00)(140)(115){|\scriptsize| Supervised L.};
-    \arctext[PROB][SkyArc][5pt](4.50)(140)(75){|\scriptsize\color{black}| Probabilistic Models};
+    \arctext[ML][RedArc][8pt](2.75)(135)(85){|\footnotesize\bf\color{white}| Machine Learning};
+    \arctext[REIN][SkyArc][5pt](3.50)(135)(85){|\scriptsize\color{black}| Decision Trees};
+    \arctext[KNOW][SkyArc][5pt](4.00)(135)(85){|\scriptsize| Neural Networks};
+%    \arctext[SUPL][SkyArc][5pt](4.00)(140)(115){|\scriptsize| Supervised L.};
+    \arctext[PROB][SkyArc][5pt](4.50)(135)(85){|\scriptsize\color{black}| Explanation Based Learning};
     
     % Problem Solving
-    \arctext[SOLV][RedArc][8pt](2.75)(70)(23){|\footnotesize\bf\color{white}| Problem Solving};
-    \arctext[SRCH][SkyArc][5pt](3.50)(70)(23){|\scriptsize\color{black}| Search };
-    \arctext[HEUR][SkyArc][5pt](4.00)(70)(50){|\scriptsize| Heuristics};
-	\arctext[ADVS][SkyArc][5pt](4.00)(47)(23){|\scriptsize| Adversarial S.};    
-	\arctext[CONST][SkyArc][5pt](4.50)(70)(23){|\scriptsize\color{black}| Constraint Analysis };
+    \arctext[SOLV][RedArc][8pt](2.75)(80)(40){|\footnotesize\bf\color{white}| Searching};
+    \arctext[SRCH][SkyArc][5pt](3.50)(80)(40){|\scriptsize\color{black}| Graph Searching };
+    \arctext[HEUR][SkyArc][5pt](4.00)(80)(40){|\scriptsize| Heuristic Search};
+	\arctext[CONST][SkyArc][5pt](4.50)(80)(40){|\scriptsize\color{black}| Constraint Satisfaction};
 	
 	% Natural Language Processing
-    \arctext[NLP][RedArc][8pt](2.75)(15)(-15){|\footnotesize\bf\color{white}| NLP};
-    \arctext[TRAN][SkyArc][5pt](3.50)(20)(-20){|\scriptsize\color{black}| Machine translation};
-    \arctext[SPER][SkyArc][5pt](4.00)(20)(-20){|\scriptsize| Speech Recognition};
-    \arctext[INFX][SkyArc][5pt](4.50)(20)(-20){|\scriptsize\color{black}| Information Extraction};
+    \arctext[NLP][RedArc][8pt](2.75)(35)(-20){|\footnotesize\bf\color{white}| Definite Knowledge};
+    \arctext[TRAN][SkyArc][5pt](3.50)(35)(5){|\scriptsize\color{black}| Recursion};
+    \arctext[TRAN][SkyArc][5pt](3.50)(0)(-20){|\scriptsize\color{black}| NLP};
+    \arctext[SPER][SkyArc][5pt](4.00)(35)(-20){|\scriptsize| Grammar Augmentation};
+    \arctext[INFX][SkyArc][5pt](4.50)(35)(-20){|\scriptsize\color{black}| First Order Predicate Calculus};
 
     % Decision Making
-    \arctext[DEC][RedArc][8pt](2.75)(290)(340){|\footnotesize\bf\color{white}| Decision Making};
-    \arctext[LOG][SkyArc][5pt](3.50)(290)(335){|\scriptsize\color{black}| Logic};
-    \arctext[KNOW][SkyArc][5pt](4.00)(290)(335){|\scriptsize| Knowledge Engineering};
-    \arctext[PLAN][SkyArc][5pt](4.50)(290)(335){|\scriptsize| Real World Planning};
+    \arctext[DEC][RedArc][8pt](2.75)(290)(335){|\footnotesize\bf\color{white}| Planning};
+    \arctext[LOG][SkyArc][5pt](3.50)(290)(335){|\scriptsize\color{black}| Time Representation};
+    \arctext[KNOW][SkyArc][5pt](4.00)(290)(335){|\scriptsize| World Representations};
+    \arctext[PLAN][SkyArc][5pt](4.50)(290)(335){|\scriptsize| Forward Planning};
     
     % Reasoning
     \arctext[REAS][RedArc][8pt](2.75)(250)(285){|\footnotesize\bf\color{white}|  Reasoning};
-    \arctext[PROB][SkyArc][5pt](3.50)(250)(285){|\scriptsize\color{black}| Probabilistic R.};
-    \arctext[REAT][SkyArc][5pt](4.00)(250)(285){|\scriptsize| Reasoning over time};
-    \arctext[UNQU][SkyArc][5pt](4.50)(248)(287){|\scriptsize\color{black}| Uncertainty Quantification};
+    \arctext[PROB][SkyArc][5pt](3.50)(250)(285){|\scriptsize\color{black}| Semantics};
+    \arctext[REAT][SkyArc][5pt](4.00)(249)(287){|\scriptsize| Symbolic Representation};
+    \arctext[UNQU][SkyArc][5pt](4.50)(248)(287){|\scriptsize\color{black}| Clauses, Questions, Answers};
     
     % Robotics
-    \arctext[ROB][RedArc][8pt](2.75)(210)(245){|\footnotesize\bf\color{white}|  Robotics};
-    \arctext[RPER][SkyArc][5pt](3.50)(210)(245){|\scriptsize\color{black}| R. Perception};
-    \arctext[RACT][SkyArc][5pt](4.00)(210)(245){|\scriptsize| R. Actuation};
-    \arctext[MAPL][SkyArc][5pt](4.50)(210)(245){|\scriptsize\color{black}| Mapping, Localization};
+    \arctext[ROB][RedArc][8pt](2.75)(200)(245){|\footnotesize\bf\color{white}|  Robotics};
+    \arctext[RPER][SkyArc][5pt](3.50)(200)(245){|\scriptsize\color{black}| Agent Functions};
+    \arctext[RACT][SkyArc][5pt](4.00)(200)(245){|\scriptsize| Robotic Systems};
+    \arctext[MAPL][SkyArc][5pt](4.50)(200)(224){|\scriptsize\color{black}| Agent Models};
+    \arctext[MAPL][SkyArc][5pt](4.50)(226)(245){|\scriptsize\color{black}| Architecture};
     
     % Object Recognition
-    \arctext[RECO][RedArc][8pt](2.75)(145)(205){|\footnotesize\bf\color{white}| Object Recognition};
-    \arctext[VIS][SkyArc][5pt](3.50)(145)(205){|\scriptsize\color{black}| Vision};
-    \arctext[IMGP][SkyArc][5pt](4.00)(145)(205){|\scriptsize\color{black}| Image Processing };
-    \arctext[MOTC][SkyArc][5pt](4.50)(145)(205){|\scriptsize\color{black}| Motion, shading, contour analysis};   
+    \arctext[RECO][RedArc][8pt](2.75)(140)(195){|\footnotesize\bf\color{white}| Knowledge};
+    \arctext[VIS][SkyArc][5pt](3.50)(140)(195){|\scriptsize\color{black}| Representation Language};
+    \arctext[IMGP][SkyArc][5pt](4.00)(140)(195){|\scriptsize\color{black}| Map Problem to Representation };
+    \arctext[MOTC][SkyArc][5pt](4.50)(140)(195){|\scriptsize\color{black}| Knowledge Based Systems};   
   
 
     %ADITIONAL EXTERNAL ARC
-%    \arctext[NEW][
-%        color=white,
-%        shade,      
-%        upper left=blue,
-%        upper right=black!50,
-%        lower left=blue,
-%        lower right=blue!50,
-%        rounded corners = 8pt
-%        ][8pt](5.2)(270)(-90){|\footnotesize\bf\color{white}| "An [artificial intelligence] agent is anything that can be viewed as perceiving its environment through sensors and acting upon that environment through actuators." Norvig and Russell};
+    \arctext[NEW][
+        color=white,
+        shade,      
+        upper left=gray,
+        upper right=black!50,
+        lower left=gray,
+        lower right=gray!50,
+        rounded corners = 8pt
+        ][8pt](5.2)(180)(0){|\footnotesize\bf\color{white}| "Computational Intelligence: A Logical Approach" by David Poole, Alan Mackworth and Randy Goebel};
 
     % Drawing the Arrows from contributing branch to AI
     % Format: \arcarrow(above/below ID)(abobe/below ID)[shift]

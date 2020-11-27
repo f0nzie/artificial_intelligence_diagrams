@@ -124,3 +124,13 @@ We see something new here: "physical algorithms" and "immune algorithms". They w
 A different take on AI, from the point of view of the cognitive mode. I could not find though anything related to decision making, logic, reasoning, or problem solving.
 
 ![](figures/yes_ai/1606497423133.png)
+
+
+
+
+
+## References
+
+*   "Artificial Intelligence: A Modern Approach" by Peter Norvig and Stuart Russell.
+*   "Computational Intelligence: A Logical Approach" by David Poole, Alan Mackworth and Randy Goebel.
+*   
