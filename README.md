@@ -6,13 +6,44 @@ For instance, **ML** by itself cannot be intelligent because lacks reasoning, lo
 
 Intelligence is much more than that. 
 
-Stating that **ML** is part of **AI** dramatically lowers the bar of what John McCarthy meant by **AI**. Chapter two of the AIAMA ([Artificial Intelligence: A Modern Approach](http://aima.cs.berkeley.edu/)) book contains examples and schematics of what **AI** agent is. In essence, an **AI agent** perceives its environment by means of **sensors**, and acts upon the **environment** through **actuators**; in between these two there is logic, reasoning, decision making that makes the agent act autonomously, correcting itself with no human intervention.
+Stating that **ML** is part of **AI** dramatically lowers the bar of what John McCarthy meant by **AI**. Chapter two of the AIAMA ([Artificial Intelligence: A Modern Approach](http://aima.cs.berkeley.edu/)) book -which counts five editions- contains examples and schematics of what an **AI** agent is. In essence, an **AI agent** perceives its environment by means of **sensors**, and acts upon the **environment** through **actuators**; in between these two, there is logic, reasoning, decision making that makes the agent act autonomously, correcting itself with no human intervention.
 
 The figure is my crude attempt of explaining what the AI contributors are (brown).
 
 ![](figures/artificial_intelligence.png)
 
 
+
+## Background
+
+Our first instinct would bring us to say Machine Learning is a **subset** of Artificial intelligence. Then, starts getting fuzzy and nebulous when we find papers, articles, posts claiming to be on Artificial intelligence. You start reading them and turns out they 're about Machine Learning or Data Science. At this point we just don't know, if the author(s) made the mistake by **ignorance** (didn't research or read enough literature), or purposely tried to **deceive** readers. **Commercialism** also plays a huge part in all this. Although, **Machine Learning** has had -still has- **tremendous achievements** to show, **marketing** departments prefer to call it Artificial intelligence.
+
+Books on artificial intelligence DO NOT do that. 
+They are written by scientists -generally- with strong ethical codes. 
+
+So, today's Artificial intelligence, Machine Learning, and Data Science atmosphere is charged with **false** stories, **inflated** achievements. That's bad for all of us. Because in the end what we receive is pseudo-science. 
+
+**Science is hard** - it's supposed to be. Artificial intelligence, at the **top** of the food chain, was one of the ultimate frontiers. I'm sure [John McCarthy](http://jmc.stanford.edu/) would not agree to qualify a linear regression, a neural network, or a bare robot, as being Artificial intelligence. Of course, they could be AI with the right combination of components. Machine Learning is only one of them. 
+
+
+
+## "You are spreading misinformation ..."
+
+If I may invite you to read ["Artificial Intelligence—The Revolution Hasn’t Happened Yet" by Prof. Michael I. Jordan](https://hdsr.mitpress.mit.edu/pub/wot7mkc1/release/8).
+
+With that clarity that comes from a mixed background of engineering and science, Prof. Jordan diagnose the current state of AI. These are my takeaways.
+
+1- Clearly, there is a **misunderstanding** of the word Artificial Intelligence, not only by the general public but also **scientists**.
+
+2- It is difficult to grasp the concept of AI because **we are living it**. But it's time that universities come up with a career on AI Engineering.
+
+3- Most of the **successes** we attribute to AI are actually **Machine Learning**. All technological leading companies use ML throughout all their business; read Google, Netflix, Facebook, Amazon, Twitter, Microsoft, IBM, etc. 
+
+4- AI originally was meant to focus on the **cognitive capability** of humans. After almost 70 years still remains elusive. 
+
+5- What we call AI today **arose from the fields** of pattern recognition, movement control and statistics. 
+
+6- Although document retrieval, text classification, fraud detection, recommendation systems, personalized search, social network analysis, planning, diagnostics, and A/B testing are not AI but **Machine Learning**, they are **very successful**. And, still we insist in calling them AI.
 
 ## What Artificial Intelligence is not
 
@@ -50,9 +81,11 @@ This diagram is wrong twice. Deep Learning is a subset of Neural Networks. Machi
 
 The **interaction with the environment** called here "technologies physical enablement" does not belong to Machine Learning, it is part of AI. Sensors and actuators (or effectors) are used by Artificial Intelligence to interact with the environment; they are not contributors. Interaction with the environment is another dimension of an AI agent.
 
-
-
 <img src="figures/no_ai/venn_full_text.jpeg" style="zoom: 67%;" />
+
+
+
+
 
 
 
@@ -61,6 +94,22 @@ I would move Machine Learning circle outside of AI. The other smaller circles (v
 <img src="figures/yes_ai/1606498785263.png" style="zoom: 67%;" />
 
 
+
+
+
+
+
+These all are Machine Learning techniques; they are not AI.
+
+![img](https://media-exp1.licdn.com/dms/image/C562CAQGt7l9Pv1aT7w/comment-image-shrink_8192_1280/0?e=1606849200&v=beta&t=qWPdmFu0cPOpzGbZeDYkq6zh3s_3qPJOegc_JJuJmRY)
+
+
+
+
+
+
+
+------
 
 ## Artificial Intelligence representations
 
@@ -121,6 +170,15 @@ We see something new here: "physical algorithms" and "immune algorithms". They w
 
 
 
+The following figure needs some grouping but gives the idea of what tools you could use to make an AI agent.
+It has good intentions but mixes **applications of AI** with **disciplines** contributing to AI.
+
+<img src="assets/README/ai_tech_escape" alt="img" style="zoom:67%;" />
+
+
+
+
+
 A different take on AI, from the point of view of the cognitive mode. I could not find though anything related to decision making, logic, reasoning, or problem solving.
 
 ![](figures/yes_ai/1606497423133.png)
@@ -129,8 +187,28 @@ A different take on AI, from the point of view of the cognitive mode. I could no
 
 
 
+I would just add reasoning, problem solving, and decision making. Deep Learning would go under supervised learning. Although not for long. There have been successes in some types of Generative Adversarial Networks or GANs -some of which use Deep Learning through Convolutional Neural Networks- where the GAN can discriminate and classify unlabeled data.
+
+<img src="https://media-exp1.licdn.com/dms/image/C562CAQFjZ0u1k8vGdQ/comment-image-shrink_8192_1280/0?e=1606849200&v=beta&t=bfWD3piii85PCON_MQP-Ey7dFYzuXqDmHiyDLPfSU7U" alt="img" style="zoom: 50%;" />
+
+
+
+
+
+This is another perspective. What are the disciplines that have made possible Artificial Intelligence. In this diagram we see few. I would add also: Economics, Neuroscience, Computer Engineering, Control Theory, Cybernetics, Linguistics, Statistics.
+
+![img](assets/README/1606498509013)
+
+
+
+
+
+A different view on classification of contributing branches of AI.
+
+<img src="https://media-exp1.licdn.com/dms/image/C562CAQExAyHJLWUfkA/comment-image-shrink_8192_1280/0/1606498583974?e=1606849200&v=beta&t=5imLsQVV1rjif0VFN8U-HuKwVxnb7FzuwUnxQb7ApSA" alt="img" style="zoom: 67%;" />
+
 ## References
 
 *   "Artificial Intelligence: A Modern Approach" by Peter Norvig and Stuart Russell.
 *   "Computational Intelligence: A Logical Approach" by David Poole, Alan Mackworth and Randy Goebel.
-*   
+*   "What are the branches of AI" by John McCarthy. [Link To Stanford University](http://jmc.stanford.edu/artificial-intelligence/what-is-ai/branches-of-ai.html)
