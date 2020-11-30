@@ -10,7 +10,7 @@ Stating that **ML** is part of **AI** dramatically lowers the bar of what John M
 
 The figure is my crude attempt of explaining what the AI contributors are (brown).
 
-![](figures/artificial_intelligence.png)
+![	](artificial_intelligence_aiama_arr.png)
 
 
 
@@ -101,7 +101,7 @@ I would move Machine Learning circle outside of AI. The other smaller circles (v
 
 These all are Machine Learning techniques; they are not AI.
 
-![img](https://media-exp1.licdn.com/dms/image/C562CAQGt7l9Pv1aT7w/comment-image-shrink_8192_1280/0?e=1606849200&v=beta&t=qWPdmFu0cPOpzGbZeDYkq6zh3s_3qPJOegc_JJuJmRY)
+![img](assets/README/ai_techniques_wrong)
 
 
 
@@ -189,7 +189,7 @@ A different take on AI, from the point of view of the cognitive mode. I could no
 
 I would just add reasoning, problem solving, and decision making. Deep Learning would go under supervised learning. Although not for long. There have been successes in some types of Generative Adversarial Networks or GANs -some of which use Deep Learning through Convolutional Neural Networks- where the GAN can discriminate and classify unlabeled data.
 
-<img src="https://media-exp1.licdn.com/dms/image/C562CAQFjZ0u1k8vGdQ/comment-image-shrink_8192_1280/0?e=1606849200&v=beta&t=bfWD3piii85PCON_MQP-Ey7dFYzuXqDmHiyDLPfSU7U" alt="img" style="zoom: 50%;" />
+<img src="assets/README/ai_tree_branches" alt="img" style="zoom: 50%;" />
 
 
 
@@ -205,7 +205,7 @@ This is another perspective. What are the disciplines that have made possible Ar
 
 A different view on classification of contributing branches of AI.
 
-<img src="https://media-exp1.licdn.com/dms/image/C562CAQExAyHJLWUfkA/comment-image-shrink_8192_1280/0/1606498583974?e=1606849200&v=beta&t=5imLsQVV1rjif0VFN8U-HuKwVxnb7FzuwUnxQb7ApSA" alt="img" style="zoom: 67%;" />
+<img src="assets/README/1606498583974" alt="img" style="zoom: 67%;" />
 
 ## References
 
