@@ -45,6 +45,8 @@ With that clarity that comes from a mixed background of engineering and science,
 
 6- Although document retrieval, text classification, fraud detection, recommendation systems, personalized search, social network analysis, planning, diagnostics, and A/B testing are not AI but **Machine Learning**, they are **very successful**. And, still we insist in calling them AI.
 
+There is also eye opening interview by Lex Friedman to Prof. Jordan in YouTube. Here is the [link](https://www.youtube.com/watch?v=EYIKy_FM9x0), whom Lex calls "the Miles Davis of Machine Learning".
+
 ## What Artificial Intelligence is not
 
 Definitely the following diagrams do NOT represent what Artificial Intelligence is.
