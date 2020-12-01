@@ -47,6 +47,26 @@ With that clarity that comes from a mixed background of engineering and science,
 
 There is also eye opening interview by Lex Friedman to Prof. Jordan in YouTube. Here is the [link](https://www.youtube.com/watch?v=EYIKy_FM9x0), whom Lex calls "the Miles Davis of Machine Learning".
 
+
+
+
+
+## The view of Artificial Intelligence by Prof. John McCarthy
+
+Branches of Artificial Intelligence by Prof. John McCarthy
+
+It is interesting to note how the personal computer and computerized  electronics completely warped the AI landscape. If we compare it to the  one by Norvig and Russell, the latter gives way to Robotics, Object  Recognition, Machine Learning, and Natural Language Processing.
+
+It is mind boggling to see Machine Learning, having brought most of the  successes that are attributed to AI, public and general and even  scientists insist in calling it AI. It is not because of the word  "artificial"; we are irremediably fascinated by anything labeled with  "intelligence".
+
+Good part of it is commercialism. 
+
+https://www.linkedin.com/posts/alfonsorreyes_machinelearning-artificialintelligence-datascience-activity-6739357027979677696-ynI2
+
+
+
+![](assets/README/artificial_intelligence_jmccarthy_arr.png)
+
 ## What Artificial Intelligence is not
 
 Definitely the following diagrams do NOT represent what Artificial Intelligence is.
