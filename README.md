@@ -65,7 +65,19 @@ https://www.linkedin.com/posts/alfonsorreyes_machinelearning-artificialintellige
 
 
 
-![](assets/README/artificial_intelligence_jmccarthy_arr.png)
+![](artificial_intelligence_jmccarthy_arr.png)
+
+
+
+## The view of AI by Poole, Mackworth and Goebel
+
+
+
+
+
+![](assets/README/computational_intelligence-pool,mackworth_arr.png)
+
+
 
 ## What Artificial Intelligence is not
 
