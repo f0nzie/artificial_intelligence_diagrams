@@ -1,0 +1,135 @@
+% Model based AI agent
+\documentclass[margin=3pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,shadows,positioning}
+
+
+\begin{document}
+\pagestyle{empty}
+
+% We need layers to draw the block diagram
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{background,main,foreground}
+
+\tikzset{
+    help lines/.style={
+        blue!50,
+        very thin},
+    frame/.style={
+        rectangle, 
+        draw, 
+        text width=6em, 
+        text centered,
+        minimum height=4em,
+        drop shadow,
+        fill=yellow!40,
+        rounded corners,
+    },
+    line/.style={
+        draw, 
+        -latex',
+        rounded corners=3mm,
+        font=\normalsize\sffamily,
+        color=black!60
+    },
+    inouts/.style={
+        rectangle, 
+        draw,
+        fill=blue!20,
+        text width=5em,
+%        minimum height=2em, 
+        minimum height=0.75cm, 
+        font=\normalsize\sffamily,
+        drop shadow,
+        text centered,
+    },
+    blackboxs/.style={
+        rectangle, 
+        draw,
+        fill=white,
+        text width=2.3em,
+        minimum height=2.7em,
+        drop shadow,
+        text centered,
+    },
+    environs/.style={
+        rectangle,
+        draw,
+        fill=red!20,
+        very thick,
+        rounded corners,
+        minimum height=7cm, 
+        minimum width=1.5cm,
+        drop shadow
+    },
+    agents/.style={
+        fill=yellow!20,
+        rounded corners,
+        draw=black!50,
+        drop shadow,
+        very thick
+    },
+    mainlabel/.style={
+        draw=none,
+%        text width=2cm,
+        font=\LARGE\sffamily,
+%        label distance=0cm,
+        align = center,
+        text depth=-1ex,
+        centered
+    },
+    state/.style={blackboxs,text width=10em,minimum height=1.5em,},
+    info/.style={
+        state,
+        rounded corners
+    }
+}
+
+\def\blockdist{2}
+
+
+\begin{tikzpicture}[font=\small\sffamily,very thick]
+   	\draw[help lines] (-10,5) grid (7,-5);
+       
+    % main elements
+     \node (blackbox) at (-\blockdist, 0)  {};
+
+     \path (blackbox.north) + (\blockdist-2, 2)  node [inouts] (sensors)   {Sensors};
+     \path (blackbox.south) + (\blockdist-2, -2) node [inouts] (actuators) {Actuators};
+     
+      \node [state] (CurState) [below of=sensors,yshift=-0.5cm] {How the world is now};
+      \node [info] (CondAction) [below of=CurState,yshift=-0.25cm] {Condition-Action Rules};
+     
+    % add center title
+    \path (blackbox.south) + (\blockdist-2, -3) node (ins) {};
+
+    % Environment box
+    \node [environs] at (-\blockdist+7,0) (environment) {};
+    \node[label={[mainlabel, rotate=-90] right:Environment}] at (environment.center) {};
+    
+    % arrows from sensors to actuators
+    \path [line] (sensors.south)    -- node {}  (CurState);
+    \path [line] (CurState.south)   -- node {} (CondAction);
+    \path [line] (CondAction.south) -- node {} (actuators);
+    
+    % connections from agent to environment
+    \path [line] [draw, <-] (sensors) -- node [above,xshift=\blockdist cm-0.5cm] {percepts}  
+            (environment.west |- sensors);
+    \path [line] [draw, ->] (actuators) -- node [above,xshift=\blockdist cm-0.5cm] {actions} 
+            (environment.west |- actuators);
+
+    % background layer
+    \begin{pgfonlayer}{background}
+        %add box for the agent
+        \path (blackbox.west   |- sensors.north)   + (\blockdist-5.5, 1.25)  node (a) {};
+        \path (blackbox.east   |- actuators.south) + (\blockdist+1.5,-1.25)   node (b) {};
+        \path (a) [agents] rectangle (b);
+        % add label for the agent
+        \node [mainlabel, below right = 0.1em and 0.5em of a] (label) {Agent};
+    \end{pgfonlayer}	
+    
+\end{tikzpicture}
+
+\end{document}
