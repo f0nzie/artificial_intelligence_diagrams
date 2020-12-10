@@ -10,7 +10,7 @@ Stating that **ML** is part of **AI** dramatically lowers the bar of what John M
 
 The figure is my crude attempt of explaining what the AI contributors are (brown).
 
-![	](artificial_intelligence_aiama_arr.png)
+![](tikz/artificial_intelligence_aiama_arr.png)
 
 
 
@@ -65,7 +65,7 @@ https://www.linkedin.com/posts/alfonsorreyes_machinelearning-artificialintellige
 
 
 
-![](artificial_intelligence_jmccarthy_arr.png)
+![](tikz/artificial_intelligence_jmccarthy_arr.png)
 
 
 
@@ -75,7 +75,15 @@ https://www.linkedin.com/posts/alfonsorreyes_machinelearning-artificialintellige
 
 
 
-![](assets/README/computational_intelligence-pool,mackworth_arr.png)
+![](tikz/computational_intelligence-pool,mackworth_arr.png)
+
+
+
+## The view of AI by Edward A. Bender
+
+
+
+![](tikz/artificial_intelligence_bender.png)
 
 
 
