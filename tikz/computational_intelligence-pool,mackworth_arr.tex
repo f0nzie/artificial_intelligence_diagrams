@@ -1,7 +1,7 @@
 % Computational Intelligence Agent Contributors
 % Drawn by Alfonso R. Reyes
 % November 2020
-% Personal interpretation of "Computational Intelligence: A Logical Approach" by David Poole, Alan Mackworth and Randy Goebel.
+% Personal interpretation of "Computational Intelligence: A Logical Approach" by David Poole, Alan Mackworth and Randy Goebel. 1998.
 % Original diagram: https://github.com/FriendlyUser/LatexDiagrams
 \documentclass[border=5pt]{standalone}
 \usepackage{xcolor}
@@ -85,7 +85,7 @@
     ]
 
     % Drawing the center for AI
-    \node[Center](AI) at (0,0) { Computational \\ Intelligence \\(AI)\\ Agent};
+    \node[Center](AI) at (0,0) { Computational \\ Intelligence \\(CI)\\ Agent};
     \coordinate (AROUND) at (0:1.2); 
 
     % Drawing the Text Arcs
@@ -98,30 +98,30 @@
 %    \arctext[SUPL][SkyArc][5pt](4.00)(140)(115){|\scriptsize| Supervised L.};
     \arctext[PROB][SkyArc][5pt](4.50)(135)(85){|\scriptsize\color{black}| Explanation Based Learning};
     
-    % Problem Solving
-    \arctext[SOLV][RedArc][8pt](2.75)(80)(40){|\footnotesize\bf\color{white}| Searching};
+    % Search
+    \arctext[SOLV][RedArc][8pt](2.75)(80)(40){|\footnotesize\bf\color{white}| Search};
     \arctext[SRCH][SkyArc][5pt](3.50)(80)(40){|\scriptsize\color{black}| Graph Searching };
-    \arctext[HEUR][SkyArc][5pt](4.00)(80)(40){|\scriptsize| Heuristic Search};
+    \arctext[HEUR][SkyArc][5pt](4.00)(80)(40){|\scriptsize| Heuristic S.};
 	\arctext[CONST][SkyArc][5pt](4.50)(80)(40){|\scriptsize\color{black}| Constraint Satisfaction};
 	
-	% Natural Language Processing
-    \arctext[NLP][RedArc][8pt](2.75)(35)(-20){|\footnotesize\bf\color{white}| Definite Knowledge};
+	% Definite Knowledge
+    \arctext[NLP][RedArc][8pt](2.75)(35)(-21){|\footnotesize\bf\color{white}| Definite Knowledge};
     \arctext[TRAN][SkyArc][5pt](3.50)(35)(5){|\scriptsize\color{black}| Recursion};
-    \arctext[TRAN][SkyArc][5pt](3.50)(0)(-20){|\scriptsize\color{black}| NLP};
-    \arctext[SPER][SkyArc][5pt](4.00)(35)(-20){|\scriptsize| Grammar Augmentation};
-    \arctext[INFX][SkyArc][5pt](4.50)(35)(-20){|\scriptsize\color{black}| First Order Predicate Calculus};
+    \arctext[TRAN][SkyArc][5pt](3.50)(2)(-21){|\scriptsize\color{black}| NLP};
+    \arctext[SPER][SkyArc][5pt](4.00)(35)(-21){|\scriptsize| Grammar Augmentation};
+    \arctext[INFX][SkyArc][5pt](4.50)(35)(-21){|\scriptsize\color{black}| First Order Predicate Calculus};
 
-    % Decision Making
-    \arctext[DEC][RedArc][8pt](2.75)(290)(335){|\footnotesize\bf\color{white}| Planning};
-    \arctext[LOG][SkyArc][5pt](3.50)(290)(335){|\scriptsize\color{black}| Time Representation};
-    \arctext[KNOW][SkyArc][5pt](4.00)(290)(335){|\scriptsize| World Representations};
-    \arctext[PLAN][SkyArc][5pt](4.50)(290)(335){|\scriptsize| Forward Planning};
+    % Planning
+    \arctext[DEC][RedArc][8pt](2.75)(292)(335){|\footnotesize\bf\color{white}| Planning};
+    \arctext[LOG][SkyArc][5pt](3.50)(292)(335){|\scriptsize\color{black}| Time Representation};
+    \arctext[KNOW][SkyArc][5pt](4.00)(292)(335){|\scriptsize| World Representations};
+    \arctext[PLAN][SkyArc][5pt](4.50)(292)(335){|\scriptsize| Forward Planning};
     
     % Reasoning
-    \arctext[REAS][RedArc][8pt](2.75)(250)(285){|\footnotesize\bf\color{white}|  Reasoning};
-    \arctext[PROB][SkyArc][5pt](3.50)(250)(285){|\scriptsize\color{black}| Semantics};
-    \arctext[REAT][SkyArc][5pt](4.00)(249)(287){|\scriptsize| Symbolic Representation};
-    \arctext[UNQU][SkyArc][5pt](4.50)(248)(287){|\scriptsize\color{black}| Clauses, Questions, Answers};
+    \arctext[REAS][RedArc][8pt](2.75)(250)(288){|\footnotesize\bf\color{white}|  Reasoning};
+    \arctext[PROB][SkyArc][5pt](3.50)(250)(288){|\scriptsize\color{black}| Semantics};
+    \arctext[REAT][SkyArc][5pt](4.00)(249)(288){|\scriptsize| Symbolic Representation};
+    \arctext[UNQU][SkyArc][5pt](4.50)(248)(288){|\scriptsize\color{black}| Clauses, Questions, Answers};
     
     % Robotics
     \arctext[ROB][RedArc][8pt](2.75)(200)(245){|\footnotesize\bf\color{white}|  Robotics};
@@ -130,11 +130,11 @@
     \arctext[MAPL][SkyArc][5pt](4.50)(200)(224){|\scriptsize\color{black}| Agent Models};
     \arctext[MAPL][SkyArc][5pt](4.50)(226)(245){|\scriptsize\color{black}| Architecture};
     
-    % Object Recognition
-    \arctext[RECO][RedArc][8pt](2.75)(140)(195){|\footnotesize\bf\color{white}| Knowledge};
-    \arctext[VIS][SkyArc][5pt](3.50)(140)(195){|\scriptsize\color{black}| Representation Language};
-    \arctext[IMGP][SkyArc][5pt](4.00)(140)(195){|\scriptsize\color{black}| Map Problem to Representation };
-    \arctext[MOTC][SkyArc][5pt](4.50)(140)(195){|\scriptsize\color{black}| Knowledge Based Systems};   
+    % Knowledge
+    \arctext[RECO][RedArc][8pt](2.75)(195)(140){|\footnotesize\bf\color{white}| Knowledge};
+    \arctext[VIS][SkyArc][5pt](3.50)(195)(140){|\scriptsize\color{black}| Representation Language};
+    \arctext[IMGP][SkyArc][5pt](4.00)(195)(140){|\scriptsize\color{black}| Map Problem to Representation };
+    \arctext[MOTC][SkyArc][5pt](4.50)(195)(140){|\scriptsize\color{black}| Knowledge Based Systems};   
   
 
 %    %ADITIONAL EXTERNAL ARC
@@ -150,13 +150,13 @@
 
     % Drawing the Arrows from contributing branch to AI
     % Format: \arcarrow(above/below ID)(abobe/below ID)[shift]
-    \arcarrow(below ML)(AROUND)[30];
-    \arcarrow(below SOLV)(AROUND)[24];
-    \arcarrow(below NLP)(AROUND)[15];
+    \arcarrow(below ML)(AROUND)[27];
+    \arcarrow(below SOLV)(AROUND)[22];
+    \arcarrow(below NLP)(AROUND)[27];
     \arcarrow(below DEC)(AROUND)[-25];
     \arcarrow(below REAS)(AROUND)[-17];
-    \arcarrow(below ROB)(AROUND)[-19];
-    \arcarrow(below RECO)(AROUND)[-33];
+    \arcarrow(below ROB)(AROUND)[-22];
+    \arcarrow(below RECO)(AROUND)[30];
 
     % Same level Arrows. Not needed now
     % \draw[myarrow] (left SSNX) -- (right DUAM);
@@ -168,7 +168,7 @@
     \draw [RedArc] (legend)++(0,-0.4) rectangle ++(.8,-.3)++(0,.2) node [anchor=west, text width=3em] {capabilities,\\disciplines};
     \draw [SkyArc] (legend)++(0,-1) rectangle ++(.8,-.3)++(0,.2) node[anchor=west, color=black] {subfield};
     % source, book and authors
-    \node [text width=6.45cm] at (1,-5.6) {Source: \textit {"Computational Intelligence: A Logical Approach"} \\by David Poole, Alan Mackworth and Randy Goebel};
+    \node [text width=6.45cm] at (1,-5.6) {Source: \textit {"Computational Intelligence: A Logical Approach"} \\by David Poole, Alan Mackworth and Randy Goebel. 1998.};
     % copyright
 	\node [text width=3cm] at (3.25,-6.25) {\begin{tiny}Copyright \textcopyright Alfonso R. Reyes, 2020\end{tiny}};
 
