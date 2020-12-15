@@ -10,6 +10,8 @@ Stating that **ML** is part of **AI** dramatically lowers the bar of what John M
 
 The figure is my crude attempt of explaining what the AI contributors are (brown).
 
+## The view of AI by Peter Norvig and Stuart Russell (2010)
+
 ![](tikz/artificial_intelligence_aiama_arr.png)
 
 
@@ -69,7 +71,7 @@ https://www.linkedin.com/posts/alfonsorreyes_machinelearning-artificialintellige
 
 
 
-## The view of AI by Poole, Mackworth and Goebel
+## The view of AI by Poole, Mackworth and Goebel (1998)
 
 
 
@@ -78,6 +80,10 @@ https://www.linkedin.com/posts/alfonsorreyes_machinelearning-artificialintellige
 ![](tikz/computational_intelligence-pool,mackworth_arr.png)
 
 
+
+## The view of AI by Nils Nilsson (1998)
+
+![](tikz/artificial_intelligence-nils_nilsson-arr.png)
 
 ## The view of AI by Edward A. Bender
 
