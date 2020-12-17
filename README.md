@@ -85,7 +85,7 @@ https://www.linkedin.com/posts/alfonsorreyes_machinelearning-artificialintellige
 
 ![](tikz/artificial_intelligence-nils_nilsson-arr.png)
 
-## The view of AI by Edward A. Bender
+## The view of AI by Edward A. Bender (1986)
 
 
 
