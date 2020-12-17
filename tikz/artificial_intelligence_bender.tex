@@ -1,7 +1,7 @@
 % Artificial Intelligence Agent Contributors
 % Drawn by Alfonso R. Reyes
 % November 27, 2020
-% Personal interpretation of 
+% Personal interpretation of "Mathematical Methods in Artificial Intelligence" by Edward-A. Bender. 1986.
 % Original diagram: https://github.com/FriendlyUser/LatexDiagrams
 \documentclass[border=5pt]{standalone}
 \usepackage{xcolor}
@@ -95,11 +95,11 @@
     
 	% Machine Learning
     \arctext[ML][RedArc][8pt](2.75)(180)(120){|\footnotesize\bf\color{white}| Reasoning};
-%	\arctext[REIN][SkyArc][5pt](3.50)(140)(75){|\scriptsize\color{black}| Reinforcement Learning};
-%	\arctext[KNOW][SkyArc][5pt](4.00)(110)(75){|\scriptsize| Knowledge L.};
-%	\arctext[SUPL][SkyArc][5pt](4.00)(140)(112){|\scriptsize| Supervised L.};
-%	\arctext[PROB][SkyArc][5pt](4.50)(140)(109){|\scriptsize\color{black}| Probabilistic Models};
-%	\arctext[PROB][SkyArc][5pt](4.50)(107)(75){|\scriptsize\color{black}| Unsupervised L.};
+	\arctext[REIN][SkyArc][5pt](3.50)(180)(156){|\scriptsize\color{black}| Predicate L.};
+   	\arctext[REIN][SkyArc][5pt](3.50)(154)(120){|\scriptsize\color{black}| Propositional Logic};
+	\arctext[KNOW][SkyArc][5pt](4.00)(180)(120){|\scriptsize| Theory of Resolution};
+	\arctext[SUPL][SkyArc][5pt](4.50)(180)(150){|\scriptsize| Probability Theory};
+	\arctext[PROB][SkyArc][5pt](4.50)(148)(120){|\scriptsize\color{black}| Bayesian Nets};
     
     % Problem Solving
     \arctext[SOLV][RedArc][8pt](2.75)(110)(60){|\footnotesize\bf\color{white}| Planning};
@@ -110,8 +110,8 @@
 	   
 	% Natural Language Processing
 	\arctext[NLP][RedArc][8pt](2.75)(50)(0){|\footnotesize\bf\color{white}| Learning};
-%	\arctext[TRAN][SkyArc][5pt](3.50)(20)(-20){|\scriptsize\color{black}| Machine translation};
-%	\arctext[SPER][SkyArc][5pt](4.00)(20)(-20){|\scriptsize| Speech Recognition};
+	\arctext[TRAN][SkyArc][5pt](3.50)(50)(0){|\scriptsize\color{black}| Neural Networks};
+	\arctext[SPER][SkyArc][5pt](4.00)(50)(0){|\scriptsize| Hopfield Networks};
 %	\arctext[INFX][SkyArc][5pt](4.50)(20)(-20){|\scriptsize\color{black}| Information Extraction};    
 
     % Decision Making
@@ -167,7 +167,7 @@
     \draw[SkyArc] (legend)++(0,-1) rectangle ++(.8,-.3)++(0,.2) node[anchor=west, color=black] {subfield};
         
     % source, book and authors
-    \node [text width=6.45cm] at (1,-5.6) {Source: \textit {"Mathematical Methods in Artificial Intelligence"} \\by Edward A. Bender};        
+    \node [text width=6.45cm] at (1,-5.6) {Source: \textit {"Mathematical Methods in Artificial Intelligence"} \\by Edward A. Bender.1986.};        
     % copyright
 	\node[text width=3cm] at (3,-6.25) {\begin{tiny}Copyright \textcopyright Alfonso R. Reyes, 2020\end{tiny}};
 
