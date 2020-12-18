@@ -31,9 +31,7 @@ So, today's Artificial intelligence, Machine Learning, and Data Science atmosphe
 
 ## "You are spreading misinformation ..."
 
-If I may invite you to read ["Artificial Intelligence—The Revolution Hasn’t Happened Yet" by Prof. Michael I. Jordan](https://hdsr.mitpress.mit.edu/pub/wot7mkc1/release/8).
-
-With that clarity that comes from a mixed background of engineering and science, Prof. Jordan diagnose the current state of AI. These are my takeaways.
+If I may invite you to read ["Artificial Intelligence—The Revolution Hasn’t Happened Yet" by Prof. Michael I. Jordan](https://hdsr.mitpress.mit.edu/pub/wot7mkc1/release/8). With that clarity that comes from a mixed background of engineering and science, Prof. Jordan diagnose the current state of AI. These are my takeaways.
 
 1- Clearly, there is a **misunderstanding** of the word Artificial Intelligence, not only by the general public but also **scientists**.
 
@@ -47,17 +45,17 @@ With that clarity that comes from a mixed background of engineering and science,
 
 6- Although document retrieval, text classification, fraud detection, recommendation systems, personalized search, social network analysis, planning, diagnostics, and A/B testing are not AI but **Machine Learning**, they are **very successful**. And, still we insist in calling them AI.
 
-There is also eye opening interview by Lex Friedman to Prof. Jordan in YouTube. Here is the [link](https://www.youtube.com/watch?v=EYIKy_FM9x0), whom Lex calls "the Miles Davis of Machine Learning".
+There is also eye opening interview by Lex Friedman to Prof. Jordan in YouTube. Here is the [link](https://www.youtube.com/watch?v=EYIKy_FM9x0), whom Lex and Yann LeCun call "the Miles Davis of Machine Learning".
 
 
 
+## The view of Artificial Intelligence by Prof. John McCarthy (2007)
 
-
-## The view of Artificial Intelligence by Prof. John McCarthy
-
-Branches of Artificial Intelligence by Prof. John McCarthy
+[Branches of Artificial Intelligence by Prof. John McCarthy](http://jmc.stanford.edu/artificial-intelligence/what-is-ai/branches-of-ai.html)
 
 It is interesting to note how the personal computer and computerized  electronics completely warped the AI landscape. If we compare it to the  one by Norvig and Russell, the latter gives way to Robotics, Object  Recognition, Machine Learning, and Natural Language Processing.
+
+Professor McCarthy wished he had called the discipline "Computational Intelligence" according to Prof. Noel Sharkey.
 
 It is mind boggling to see Machine Learning, having brought most of the  successes that are attributed to AI, public and general and even  scientists insist in calling it AI. It is not because of the word  "artificial"; we are irremediably fascinated by anything labeled with  "intelligence".
 
@@ -87,13 +85,19 @@ https://www.linkedin.com/posts/alfonsorreyes_machinelearning-artificialintellige
 
 ## The view of AI by Edward A. Bender (1986)
 
+Although Professor Bender classify Artificial Intelligence from the viewpoint of Goals in six groups, the sets two main groups: Goals as Results (Reasoning, Planning, and Learning), and Specific Goals (Robotics, Vision, and Language), he dedicates most of the book to reasoning, search, and learning. See next figure. 
 
+![](tikz/artificial_intelligence_bender-00.png)
 
-![](tikz/artificial_intelligence_bender.png)
+Prof. Bender covers robotics, vision and language succinctly in the final chapter.
+
+![](tikz/artificial_intelligence_bender-01.png)
 
 
 
 ## What Artificial Intelligence is not
+
+### Machine Learning gluttony
 
 Definitely the following diagrams do NOT represent what Artificial Intelligence is.
 
@@ -102,14 +106,6 @@ The main flaw is that each of the figures makes it look like Machine Learning is
 ![](figures/no_ai/oracle_ai.png)
 
 
-
-Here we see the two disciplines Machine Learning and Data Science. They both complement each other but not necessarily intersect with Artificial Intelligence. Data Science is a reciprocal main contributor of Machine Learning but also minor contributor of Natural Language Processing and Object Recognition. ML and DS are fundamental to get a basic understanding of AI.
-
-<img src="figures/no_ai/venn_yellow.jpeg" style="zoom:125%;" />
-
-This diagram is wrong twice. Deep Learning is a subset of Neural Networks. Machine Learning is not a subset of Artificial Intelligence. ML by itself cannot be intelligent.
-
-![](figures/no_ai/venn_blue.png)
 
 
 
@@ -133,9 +129,7 @@ The **interaction with the environment** called here "technologies physical enab
 
 
 
-
-
-
+### Robotics, Vision and NLP are contributor branches of AI
 
 I would move Machine Learning circle outside of AI. The other smaller circles (vision, robotics, NLP, should be surrounding AI. Autonomous Vehicles is an application of AI, not a contributing branch.
 
@@ -145,7 +139,7 @@ I would move Machine Learning circle outside of AI. The other smaller circles (v
 
 
 
-
+### The most successful techniques are from Machine Learning
 
 These all are Machine Learning techniques; they are not AI.
 
@@ -153,7 +147,25 @@ These all are Machine Learning techniques; they are not AI.
 
 
 
+### Data Science is not Artificial Intelligence
 
+Here we see the two disciplines Machine Learning and Data Science. They both complement each other but not necessarily intersect with Artificial Intelligence. Data Science is a reciprocal main contributor of Machine Learning but also minor contributor of Natural Language Processing and Object Recognition. ML and DS are fundamental to get a basic understanding of AI.
+
+<img src="figures/no_ai/venn_yellow.jpeg" style="zoom:125%;" />
+
+### Deep Learning and Neural Networks are part of Machine Learning
+
+The following diagram is wrong twice. Deep Learning is a subset of Neural Networks. Machine Learning is not a subset of Artificial Intelligence. ML by itself cannot be intelligent.
+
+![](figures/no_ai/venn_blue.png)
+
+
+
+
+
+Cognitive Computing has split from Artificial Intelligence as the former uses psychology, neurobiology to search for human intelligence. Neural Networks and Deep Learning are not branches of Artificial Intelligence but rather Machine Learning.
+
+![](figures/no_ai/AI-work1-01.jpg)
 
 
 
@@ -260,3 +272,5 @@ A different view on classification of contributing branches of AI.
 *   "Artificial Intelligence: A Modern Approach" by Peter Norvig and Stuart Russell.
 *   "Computational Intelligence: A Logical Approach" by David Poole, Alan Mackworth and Randy Goebel.
 *   "What are the branches of AI" by John McCarthy. [Link To Stanford University](http://jmc.stanford.edu/artificial-intelligence/what-is-ai/branches-of-ai.html)
+*   [Artificial intelligence community mourns John McCarthy](https://www.bbc.com/news/technology-15444222). BBC News, 25-Oct-2011.
+*   
