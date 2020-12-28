@@ -1,0 +1,196 @@
+% Computational Intelligence Agent Contributors
+% Drawn by Alfonso R. Reyes
+% November 2020
+% Personal interpretation of "2014 (Frankish-Keith, Ramsey-William-M.) The Cambridge Handbook of Artificial Intelligence [book AI].
+% Original diagram: https://github.com/FriendlyUser/LatexDiagrams
+\documentclass[border=5pt]{standalone}
+\usepackage{xcolor}
+
+	\definecolor{ocre}{HTML}{800000}
+	\definecolor{sky}{HTML}{C6D9F1}
+	\definecolor{skybox}{HTML}{5F86B3}
+
+\usepackage{tikz}
+\usepackage{pgfmath}
+\usetikzlibrary{decorations.text, arrows.meta,calc,shadows.blur,shadings}
+
+\renewcommand*\familydefault{\sfdefault} % Set font to serif family
+
+% arctext from Andrew code with modifications:
+%Variables: 1: ID, 2:Style 3:box height 4: Radious 5:start-angl 6:end-angl 7:text {format along path} 
+\def\arctext[#1][#2][#3](#4)(#5)(#6)#7{
+
+\draw[#2] (#5:#4cm+#3) coordinate (above #1) arc (#5:#6:#4cm+#3)
+             -- (#6:#4) coordinate (right #1) -- (#6:#4cm-#3) coordinate (below right #1) arc (#6:#5:#4cm-#3) coordinate (below #1)
+             -- (#5:#4) coordinate (left #1) -- cycle;
+            \def\a#1{#4cm+#3}
+            \def\b#1{#4cm-#3}
+\path[
+    decoration={
+        raise = -0.5ex, % Controls relavite text height position.
+        text  along path,
+        text = {#7},
+        text align = center,        
+    },
+    decorate
+    ]
+    (#5:#4) arc (#5:#6:#4);
+}
+
+% arcarrow, this is mine, for beerware purpose...
+% Function: Draw an arrow from arctex coordinate specific nodes to another 
+% Arrow start at the start of arctext box and could be shifted to change the position
+% to avoid go over another box.
+% Var: 1:Start coordinate 2:End coordinate 3:angle to shift from acrtext box  
+\def\arcarrow(#1)(#2)[#3]{
+    \draw[very thick,->,>=latex,black!60] 
+        let \p1 = (#1), \p2 = (#2), % To access cartesian coordinates x, and y.
+            \n1 = {veclen(\x1,\y1)}, % Distance from the origin
+            \n2 = {veclen(\x2,\y2)}, % Distance from the origin
+            \n3 = {atan2(\y1,\x1)} % Angle where acrtext starts.
+        in (\n3-#3: \n1) -- (\n3-#3: \n2); % Draw the arrow.
+}
+
+
+\begin{document}
+\begin{tikzpicture}[
+	    % Environment Cfg
+	    font=\sf    \scriptsize,
+	    % Styles
+	    myarrow/.style={
+	        very thick,
+	        -latex,
+            black!60,
+	    },
+	    Center/.style ={
+	        circle,
+	        fill=ocre,
+	        text=white,
+	        align=center,
+	        font =\footnotesize\bf,
+	        inner sep=1pt,          
+	    },
+	    RedArc/.style ={
+	        color=black,
+	        thick,
+	        fill=ocre,
+	        blur shadow, 
+	    },
+	    SkyArc/.style ={
+	        color=skybox,
+	        thick,
+	        fill=sky,
+	        blur shadow, 
+	    },
+    ]
+
+    % Drawing the center for AI
+    \node[Center](AI) at (0,0) { Artificial \\ Intelligence \\(AI) };
+    \coordinate (AROUND) at (0:1.2); 
+
+    % Drawing the Text Arcs
+    % Format: \Arctext[ID][box-style][box-height](radious)(start-angl)(end-angl){|text-styles| Text}
+    
+	% Machine Learning
+    \arctext[LEAR][RedArc][16pt](2.75)(115)(70){|\footnotesize\bf\color{white}| Learning};
+    \arctext[INFE][SkyArc][5pt](3.60)(115)(70){|\scriptsize\color{black}| Inference};
+    \arctext[INFE][SkyArc][5pt](4.10)(115)(70){|\scriptsize\color{black}| Machine Learning};
+    \arctext[INFE][SkyArc][5pt](4.60)(115)(70){|\scriptsize\color{black}| Connectionism};
+    
+    % Search
+    \arctext[PERC][RedArc][8pt](2.50)(65)(23){|\footnotesize\bf\color{white}| Perception};
+    \arctext[CVIS][RedArc][8pt](3.05)(65)(23){|\footnotesize\bf\color{white}| Computer vision};
+    \arctext[SRCH][SkyArc][5pt](3.60)(65)(25){|\scriptsize\color{black}| Object Recognition };
+    \arctext[SRCH][SkyArc][5pt](4.10)(65)(25){|\scriptsize\color{black}| 2D/3D Modeling };
+    \arctext[SRCH][SkyArc][5pt](4.60)(65)(25){|\scriptsize\color{black}| Scene Understanding };
+
+	
+	% Definite Knowledge
+    \arctext[REAS][RedArc][8pt](2.50)(20)(-25){|\footnotesize\bf\color{white}| Reasoning};
+    \arctext[DECM][RedArc][8pt](3.05)(20)(-25){|\footnotesize\bf\color{white}| Decision Making};
+    \arctext[SRCH][SkyArc][5pt](3.60)(20)(-25){|\scriptsize\color{black}| Knowl. Representation };
+    \arctext[SRCH][SkyArc][5pt](4.10)(20)(-25){|\scriptsize\color{black}| Logic and Probabilities };    
+    \arctext[SRCH][SkyArc][5pt](4.60)(20)(-25){|\scriptsize\color{black}| Automated Decision Making };        
+
+    % Planning
+    \arctext[LANG][RedArc][8pt](2.50)(288)(330){|\footnotesize\bf\color{white}| Language};
+    \arctext[COMM][RedArc][8pt](3.05)(288)(330){|\footnotesize\bf\color{white}| Communication};
+    % sub
+    \arctext[SRCH][SkyArc][5pt](3.60)(288)(330){|\scriptsize\color{black}| NLP };
+    \arctext[SRCH][SkyArc][5pt](4.10)(288)(330){|\scriptsize\color{black}| Computational Linguistics };
+    \arctext[SRCH][SkyArc][5pt](4.60)(288)(330){|\scriptsize\color{black}| Information Retrieval };    
+
+    
+    % Reasoning
+    \arctext[ACTI][RedArc][8pt](2.50)(250)(285){|\footnotesize\bf\color{white}| Actions};
+    \arctext[AGEN][RedArc][8pt](3.05)(250)(285){|\footnotesize\bf\color{white}| Agents};
+    % sub
+    \arctext[SRCH][SkyArc][5pt](3.60)(250)(285){|\scriptsize\color{black}| Behavior };
+    \arctext[SRCH][SkyArc][5pt](4.10)(250)(285){|\scriptsize\color{black}| Multiagent Behavior };
+    \arctext[SRCH][SkyArc][5pt](4.60)(250)(285){|\scriptsize\color{black}| Multiagent Learning };    
+
+    
+    % Robotics
+    \arctext[EMOT][RedArc][8pt](2.50)(210-1)(245+1){|\footnotesize\bf\color{white}| {Emotions}};
+    \arctext[CONS][RedArc][8pt](3.05)(210-1)(245+1){|\footnotesize\bf\color{white}| Consciousness};
+    % sub
+    \arctext[SRCH][SkyArc][5pt](3.60)(209)(246){|\scriptsize\color{black}| Roles of Emotions};    
+    \arctext[SRCH][SkyArc][5pt](4.10)(209)(246){|\scriptsize\color{black}| Machine Consciousness };    
+    \arctext[SRCH][SkyArc][5pt](4.60)(209)(246){|\scriptsize\color{black}| Philosophycal Perspective};        
+    
+    % Knowledge
+    \arctext[ROBO][RedArc][16pt](2.75)(205)(165){|\footnotesize\bf\color{white}| Robotics};
+    % sub
+    \arctext[SRCH][SkyArc][5pt](3.60)(205)(165){|\scriptsize\color{black}| Mobile Robotics };
+    \arctext[SRCH][SkyArc][5pt](4.10)(205)(165){|\scriptsize\color{black}| Evolutionary Robotics };
+   \arctext[SRCH][SkyArc][5pt](4.60)(205)(165){|\scriptsize\color{black}| Probabilistic Robotics };   
+
+    % Artificial Life
+    \arctext[ALIF][RedArc][8pt](2.50)(161)(120-1){|\footnotesize\bf\color{white}| (AL)};
+    \arctext[ALIF2][RedArc][8pt](3.05)(161)(120-1){|\footnotesize\bf\color{white}| Artificial Life};
+    % sub
+    \arctext[SRCH][SkyArc][5pt](3.60)(161)(147){|\scriptsize\color{black}| Hard };    
+    \arctext[SRCH][SkyArc][5pt](3.60)(145)(135){|\scriptsize\color{black}| Wet};       
+    \arctext[SRCH][SkyArc][5pt](3.60)(133)(120-1){|\scriptsize\color{black}| Soft}; 
+    \arctext[SRCH][SkyArc][5pt](4.10)(161)(120-1){|\scriptsize\color{black}| Philosophical Implications };         
+    \arctext[SRCH][SkyArc][5pt](4.60)(160+1)(120-1){|\scriptsize\color{black}| Science and Engineering of AL};         
+  
+
+%    %ADITIONAL EXTERNAL ARC
+%    \arctext[NEW][
+%        color=white,
+%        shade,      
+%        upper left=gray,
+%        upper right=black!50,
+%        lower left=gray,
+%        lower right=gray!50,
+%        rounded corners = 8pt
+%        ][8pt](5.2)(180)(0){|\footnotesize\bf\color{white}| "Cambridge Handbook of Artficial Intelligence};
+
+    % Drawing the Arrows from contributing branch to AI
+    % Format: \arcarrow(above/below ID)(abobe/below ID)[shift]
+    \arcarrow(below LEAR)(AROUND)[24];
+    \arcarrow(below PERC)(AROUND)[22];
+    \arcarrow(below REAS)(AROUND)[24];
+    \arcarrow(below LANG)(AROUND)[-25];
+    \arcarrow(below ACTI)(AROUND)[-17];
+    \arcarrow(below EMOT)(AROUND)[-20];
+    \arcarrow(below ROBO)(AROUND)[22];
+    \arcarrow(below ALIF)(AROUND)[20];
+
+    % Same level Arrows. Not needed now
+    % \draw[myarrow] (left SSNX) -- (right DUAM);
+    % \draw[myarrow] (left ML) -- (left SRel);
+    % \draw[myarrow] (left SCap) -- (right ML);
+
+	% Color Legend and labels
+    \draw [myarrow] (-5,-5) coordinate (legend) -- ++(.8,0) node[anchor=west] {(contribution)};
+    \draw [RedArc] (legend)++(0,-0.4) rectangle ++(.8,-.3)++(0,.2) node [anchor=west, text width=3em] {capabilities,\\disciplines};
+    \draw [SkyArc] (legend)++(0,-1) rectangle ++(.8,-.3)++(0,.2) node[anchor=west, color=black] {subfield};
+    % source, book and authors
+    \node [text width=6.45cm] at (1,-5.6) {Source: \textit {"Cambridge Handbook of Artificial Intelligence"} by \scriptsize{M. Boden, R. Sun, D. Danks, M. Vincze, S. Wachsmuth, G. Sagerer, E. Amir, Y. Wilks, E. Alonso, M. Scheutz, P. Husbands, M. A. Bedau}. 2014.};
+    % copyright
+	\node [text width=3cm] at (3.25,-6.25) {\begin{tiny}Copyright \textcopyright Alfonso R. Reyes, 2020\end{tiny}};
+
+\end{tikzpicture}  
+\end{document}
